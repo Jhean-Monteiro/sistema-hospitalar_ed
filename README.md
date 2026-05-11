@@ -32,4 +32,3 @@ O sistema permite o gerenciamento de três setores distintos:
    ```bash
    gcc main.c pilha.c fila.c fila_circular.c -o hospital# sistema-hospitalar-ed
 # sistema-hospitalar_ed
-# sistema-hospitalar_ed
