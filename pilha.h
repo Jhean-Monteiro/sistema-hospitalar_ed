@@ -8,8 +8,6 @@
 
 // declaração das funções
 void pilha_iniciar();
-int pilha_cheia();
-int pilha_vazia();
 void pilha_empilhar(Paciente paciente);
 Paciente pilha_desempilhar();
 void pilha_exibir();

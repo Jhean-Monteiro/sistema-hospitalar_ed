@@ -10,11 +10,11 @@ void pilha_iniciar() {
     topo = -1;
 }
 
-int pilha_vazia(){
+static int pilha_vazia(){
     return topo == -1;
 }
 
-int pilha_cheia(){
+static int pilha_cheia(){
     return topo == MAX_PILHA -1;
 }
 
@@ -41,7 +41,7 @@ Paciente pilha_desempilhar(){
 
 void pilha_exibir(){
     if(pilha_vazia()){
-        printf("Não há ninguém na Emergência.\n");
+        printf("Não há ninguém para exibr.\n");
         return;
     }
     printf("== EMERGÊNCIA: (topo -> base) ===\n");
