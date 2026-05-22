@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "paciente.h"
 #include "pilha.h"
 #include "fila.h"
@@ -11,6 +13,7 @@ static void atender_paciente();
 static void mostrar_pacientes();
 static void transferir_paciente();
 static void relatorios();
+static void teste_estresse();
 
 int main() {
     pilha_iniciar();
@@ -26,6 +29,7 @@ int main() {
         printf("3. Mostrar pacientes\n");
         printf("4. Transferir paciente\n");
         printf("5. Relatorios\n");
+        printf("6. Teste de Estresse\n");
         printf("0. Sair\n");
         printf("Opcao: ");
         scanf("%d", &opcao);
@@ -40,6 +44,8 @@ int main() {
             case 4: transferir_paciente(); 
                 break;
             case 5: relatorios();         
+                break;
+            case 6: teste_estresse();         
                 break;
             case 0: printf("Encerrando sistema...\n"); 
                 break;
@@ -172,3 +178,44 @@ static void relatorios() {
     fc_exibir();
 }
 
+static void teste_estresse() {
+    int n;
+    printf("\nQuantidade de operacoes: ");
+    if (scanf("%d", &n) != 1) return;
+
+    clock_t inicio = clock();
+
+    for (int i = 0; i < n; i++) {
+        Paciente p;
+        
+        // cria um nome genérico como "Paciente 1", "Paciente 2", etc.
+        sprintf(p.nome, "%d", i + 1); 
+        
+        p.idade     = 1 + rand() % 99; // gera idade de 1 a 99
+        p.gravidade = 1 + rand() % 5;  // gera gravidade de 1 a 5
+        p.tipo      = 1 + rand() % 3;  // sorteia o tipo/setor (1, 2 ou 3)
+
+        switch (p.tipo) { 
+            case 1: 
+                if (i % 2 == 0) pilha_desempilhar();
+                else pilha_empilhar(p);
+                break; 
+
+            case 2: 
+                if (i % 2 == 0) fila_desenfileirar();
+                else fila_enfileirar(p);
+                break; 
+
+            case 3: 
+                if (i % 2 == 0) fc_desenfileirar();
+                else fc_enfileirar(p);
+                break; 
+        }
+    }
+
+    clock_t fim = clock();
+    double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
+    printf("\n=== FIM DO TESTE DE ESTRESSE ===\n");
+    printf("%d operacoes simuladas em %.4f segundos!\n", n, tempo);
+}
