@@ -5,6 +5,7 @@
 
 #define MAX_FILA 10
 
+
 void fila_iniciar();
 <<<<<<< HEAD
 int fila_vazia();

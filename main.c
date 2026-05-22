@@ -4,6 +4,7 @@
 #include "fila.h"
 #include "fila_circular.h"
 
+
 // funções do menu
 static void cadastrar_paciente();
 static void atender_paciente();

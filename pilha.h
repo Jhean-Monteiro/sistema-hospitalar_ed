@@ -6,6 +6,7 @@
 #define MAX_PILHA 10
 
 
+
 // declaração das funções
 void pilha_iniciar();
 void pilha_empilhar(Paciente paciente);

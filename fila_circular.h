@@ -5,6 +5,7 @@
 
 #define MAX_CIRCULAR 8
 
+
 void fc_iniciar();
 <<<<<<< HEAD
 int fc_vazia();

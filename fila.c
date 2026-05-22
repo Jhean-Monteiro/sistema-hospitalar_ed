@@ -26,6 +26,7 @@ static int fila_vazia(){
     return frente > tras;
 }
 
+
 static int fila_cheia() {
 >>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
     return tras == MAX_FILA -1;

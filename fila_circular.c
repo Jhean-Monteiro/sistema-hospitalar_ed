@@ -4,6 +4,7 @@
 
 // FILA DO EXAME
 
+
 Paciente fc[MAX_CIRCULAR];
 static int frente = -1;
 static int tras = -1;

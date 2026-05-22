@@ -10,4 +10,5 @@ typedef struct {
     int tipo; // 1=Emergência, 2=Consulta, 3=Exame
 } Paciente;
 
+
 #endif

@@ -10,6 +10,7 @@ void pilha_iniciar() {
     topo = -1;
 }
 
+
 static int pilha_vazia(){
     return topo == -1;
 }
