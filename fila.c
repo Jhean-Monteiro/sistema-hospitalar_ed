@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include "fila.h"
 
-<<<<<<< HEAD
 // FILA DE CONSULTAS
-=======
->>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
 
 Paciente fila[MAX_FILA];
 static int frente = 0; // começa de zero na fila linear
@@ -15,20 +12,11 @@ void fila_iniciar() {
     tras = -1;
 }
 
-<<<<<<< HEAD
-int fila_vazia(){
-    return frente > tras;
-}
-
-int fila_cheia() {
-=======
 static int fila_vazia(){
     return frente > tras;
 }
 
-
 static int fila_cheia() {
->>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
     return tras == MAX_FILA -1;
 }
 
@@ -56,11 +44,7 @@ Paciente fila_desenfileirar() {
 
 void fila_exibir() {
     if (fila_vazia()){
-<<<<<<< HEAD
         printf("não existe paciente na fila de consultas.\n");
-=======
-        printf("não existe paciente para exibir.\n");
->>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
         return;
     }
 

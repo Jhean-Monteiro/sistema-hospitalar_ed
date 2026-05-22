@@ -14,19 +14,11 @@ void fc_iniciar(){
     tras = -1;
 }
 
-<<<<<<< HEAD
 int fc_vazia() {
     return frente == -1;
 }
 
 int fc_cheia() {
-=======
-static int fc_vazia() {
-    return frente == -1;
-}
-
-static int fc_cheia() {
->>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
     return frente == (tras + 1) % MAX_CIRCULAR;
 }
 
@@ -68,11 +60,7 @@ Paciente fc_desenfileirar(){
 
 void fc_exibir() {
     if (fc_vazia()) {
-<<<<<<< HEAD
         printf("Erro: Nenhum paciente na fila de exames!\n");
-=======
-        printf("Erro: Nenhum paciente para exibir!\n");
->>>>>>> 2bc80a5 (adicionado static em funções utilizadas apenas em um arquivo e retiradas as mesmas dos arquivos de cabeçalho)
         return;
     }
 
