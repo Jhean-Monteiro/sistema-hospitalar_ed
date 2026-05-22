@@ -14,11 +14,11 @@ void fc_iniciar(){
     tras = -1;
 }
 
-int fc_vazia() {
+static int fc_vazia() {
     return frente == -1;
 }
 
-int fc_cheia() {
+static int fc_cheia() {
     return frente == (tras + 1) % MAX_CIRCULAR;
 }
 

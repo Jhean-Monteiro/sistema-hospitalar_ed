@@ -7,8 +7,6 @@
 
 
 void fc_iniciar();
-int fc_vazia();
-int fc_cheia();
 void fc_enfileirar(Paciente paciente);
 Paciente fc_desenfileirar();
 void fc_exibir();
